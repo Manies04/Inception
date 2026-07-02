@@ -34,7 +34,7 @@ services:
     depends_on:
       - mariadb
 
-    nginx:
+  nginx:
     container_name: nginx
     build:
       context: ./requirements/nginx
