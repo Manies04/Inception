@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 # Install PHP-FPM and required extensions
 RUN apt-get update && apt-get install -y \

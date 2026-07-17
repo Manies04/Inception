@@ -34,7 +34,7 @@ services:
     depends_on:
       - mariadb
 
-    nginx:
+  nginx:
     container_name: nginx
     build:
       context: ./requirements/nginx
@@ -52,8 +52,18 @@ services:
       - wordpress
 
 volumes:
-  mariadb_data:
   wordpress_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/tiade-al/data/wordpress
+  mariadb_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/tiade-al/data/mariadb
   
 networks:
   inception:
