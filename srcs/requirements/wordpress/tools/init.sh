@@ -48,4 +48,4 @@ fi
 # Arranca PHP-FPM em foreground
 echo "A arrancar PHP-FPM..."
 mkdir -p /run/php
-exec php-fpm7.4 -F
+exec php-fpm8.2 -F
